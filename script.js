@@ -7,12 +7,15 @@ const myArray = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 let pwLength = 11
 
 // Using the above array and password length variable, create a random password using a for loop inside of a function called "addNewPassword" either saved as an arrow function variable or a traditional function
-function addNewPassword (myArray) {
-    for(let i = 0; i < myArray.length; i++) {
-        
-    }
-}
+const addNewPassword= ()=> {
+    let passWordHolder = '';
+    const characterLength = myArray.length
 
+    for (let i=0; i<pwLength; i++){
+    passWordHolder += myArray[Math.floor(Math.random() * characterLength)]
+    }
+    return passWordHolder;
+}
 addNewPassword();
 
 
